@@ -90,9 +90,10 @@
 2. ไปที่ https://vercel.com → **Add New Project** → เลือก repo นี้
 3. ในหน้า **Environment Variables** ให้ใส่ค่าเดียวกับใน `.env.local`
 4. กด **Deploy** แล้วจะได้ลิงก์เว็บไซต์ใช้งานได้ทันที
-5. สแกนเนอร์อัตโนมัติตั้งไว้แล้วใน `vercel.json` ให้รันทุก 30 นาที โดย Vercel จะส่ง `CRON_SECRET` ให้เอง
-   (แพ็กเกจ Hobby ของ Vercel รัน Cron ได้วันละครั้ง ถ้าต้องการทุก 30 นาทีต้องใช้ Pro
-   หรือใช้บริการฟรีอย่าง cron-job.org เรียก `GET https://<โดเมนของคุณ>/api/scan` พร้อม header `Authorization: Bearer <CRON_SECRET>`)
+5. สแกนเนอร์อัตโนมัติตั้งไว้ใน `vercel.json` ให้รันวันละครั้งตอน 08:00 น. เวลาไทย (01:00 UTC) โดย Vercel จะส่ง `CRON_SECRET` ให้เอง
+   (แพ็กเกจฟรี Hobby ของ Vercel รัน Cron ได้แค่วันละครั้ง ถ้าต้องการสแกนทุก 30 นาที ให้ใช้บริการฟรีอย่าง cron-job.org
+   เรียก `GET https://<โดเมนของคุณ>/api/scan` พร้อม header `Authorization: Bearer <CRON_SECRET>`
+   หรืออัปเกรดเป็น Vercel Pro แล้วเปลี่ยน schedule เป็น `*/30 * * * *`)
 
 ### ตั้งค่า Supabase (ไม่บังคับ)
 1. สร้างโปรเจกต์ที่ supabase.com
