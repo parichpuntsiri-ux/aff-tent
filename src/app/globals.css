@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body { background: #070b14; color: #e5e9f2; }
+body { font-family: "IBM Plex Sans Thai", "IBM Plex Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+.panel { @apply rounded-xl border border-ink-700 bg-ink-900/80 backdrop-blur; }
+.panel-title { @apply flex flex-wrap gap-2 items-center justify-between px-4 pt-3 pb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-400; }
+.num { font-variant-numeric: tabular-nums; @apply font-mono; }
+.chip { @apply inline-flex items-center gap-1 rounded-md border border-ink-600 bg-ink-800 px-2 py-0.5 text-[11px] text-slate-300; }
+.scroll-thin::-webkit-scrollbar { height: 6px; width: 6px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: #26345a; border-radius: 3px; }
